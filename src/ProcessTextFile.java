@@ -37,6 +37,17 @@ public class ProcessTextFile {
         System.out.println(this.dataText);
     }
 
+    //Menghilangkan awalan 
+    public void removePrefix(){
+        String[] data = this.dataText.split(" ");
+        String result = "";
+        for (int i = 0; i < data.length; i++) {
+            if (data[i].startsWith("di")){
+                result = result.concat(data[i].substring(2) + " ");
+            } else i++;
+        }
+    }
+
     public void countWord(){
         String[] data = this.dataText.split(" ");
         System.out.println("Number of words: " + data.length);
