@@ -1,6 +1,6 @@
 import java.io.*;
 
-class ProcessTextFile {
+public class ProcessTextFile {
     private String dataText = "";
     //read txt file
     public ProcessTextFile(String path){
@@ -55,14 +55,3 @@ class ProcessTextFile {
 
 }
 
-class Main{
-    public static void main(String[] args) {
-        ProcessTextFile file = new ProcessTextFile("src\\Cerpen.txt");
-        file.removeDuplicate();
-        System.out.println(" ");
-        file.removePunctuation();
-        System.out.println(" ");
-        file.countWord();
-        file.writeFile();
-    }
-}
