@@ -39,13 +39,17 @@ public class ProcessTextFile {
 
     //Menghilangkan awalan 
     public void removePrefix(){
+        String[] prefix = {"di", "meng", "ke", "memper", "mem", "ber", "ter", "per", "men",  "diper", "keter", "peng", "pen", "pem", "meny", "mengge",};
         String[] data = this.dataText.split(" ");
         String result = "";
         for (int i = 0; i < data.length; i++) {
-            if (data[i].startsWith("di")){
-                result = result.concat(data[i].substring(2) + " ");
-            } else i++;
+            for (int j = 0; j < prefix.length; j++) {
+                if (data[i].startsWith(prefix[j]))
+                    data[i] = data[i].substring(prefix[j].length());
+            }
+            result = result.concat(data[i] + " ");
         }
+        this.dataText = result;
     }
 
     public void countWord(){

@@ -6,6 +6,8 @@ public class Main{
         file.removePunctuation();
         System.out.println(" ");
         file.countWord();
+        System.out.println(" ");
+        file.removePrefix();
         file.writeFile();
     }
 }
