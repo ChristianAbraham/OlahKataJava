@@ -8,6 +8,7 @@ public class Main{
         file.countWord();
         System.out.println(" ");
         file.removePrefix();
+        System.out.println(" ");
         file.writeFile();
     }
 }
