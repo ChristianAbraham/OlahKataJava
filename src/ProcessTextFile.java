@@ -24,7 +24,7 @@ public class ProcessTextFile {
                 result = result.concat(data[i] + " ");
         }
         this.dataText = result.toLowerCase();
-        System.out.println(this.dataText);
+        System.out.println("Duplicate removed");
     }
 
     public void removePunctuation(){
@@ -34,7 +34,7 @@ public class ProcessTextFile {
                 result = result.concat(String.valueOf(this.dataText.charAt(i)));
         }
         this.dataText = result;
-        System.out.println(this.dataText);
+        System.out.println("Punctuation removed");
     }
 
     //Menghilangkan awalan 
@@ -50,6 +50,7 @@ public class ProcessTextFile {
             result = result.concat(data[i] + " ");
         }
         this.dataText = result;
+        System.out.println("Prefix removed");
     }
 
     public void countWord(){
@@ -66,6 +67,7 @@ public class ProcessTextFile {
         } catch (Exception e) {
             System.out.println("Error: " + e);
         }
+        System.out.println("File written");
     }
 
 }
